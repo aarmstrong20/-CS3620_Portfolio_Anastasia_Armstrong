@@ -1,11 +1,15 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import Portfolio
+from .models import Hobby
 # Create your views here.
 def Home(request):
-    return HttpResponse("Hello, world. You're at the polls page.")
-def Portfolio(request):
-    return render(request, 'portfolioDB/portfolio.html')
+    return HttpResponse("Hello, world. You're at the home page. To get to portfolio: /portfolio/  hobbies: /Hobbies/ Contact: /contact/")
+def Portfolios(request):
+    portfolio = Portfolio.objects.all()
+    return HttpResponse(portfolio)
 def Hobbies(request):
-    return render(request, 'portfolioDB/hobbies.html')
+    hobby = Hobby.objects.all()
+    return HttpResponse(hobby)
 def Contact(request):
-    return render(request, 'portfolioDB/contact.html')
+    return HttpResponse("My contact info")
