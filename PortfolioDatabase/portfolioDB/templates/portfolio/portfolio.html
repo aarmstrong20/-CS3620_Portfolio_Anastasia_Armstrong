@@ -1,0 +1,13 @@
+{% for item in item_list %}
+    <h1>Anastasia Armstrong</h1>
+<div class="row">
+
+    <div class="col-md-4">
+        <h3>{{portfolio.name}}</h3>
+        <h4>{{portfolio.description}}</h4>
+    </div>
+    <div class="col-md-2">
+        <a href="{%url 'portfolio:portfolio' item.id%}"></a>
+    </div>
+</div>
+{% endfor %}
