@@ -7,16 +7,31 @@ from django.template import loader
 # Create your views here.
 def Home(request):
    template = loader.get_template('portfolioDB/home.html')
-   context = {
-       'portfolio': Portfolio.objects.all(),
-   }
    return render(request, 'portfolioDB/home.html')
 
 def Portfolios(request):
-    portfolio = Portfolio.objects.all()
-    return HttpResponse(portfolio)
+    context = {
+        'portfolio': Portfolio.objects.all(),
+    }
+    return render(request, 'portfolioDB/portfolio.html', context)
+
+def PortfolioDetail(request, portfolio_id):
+   context = {
+       'portfolio': Portfolio.objects.get(pk=portfolio_id),
+   }
+   return render(request, 'portfolioDB/portfolio_detail.html', context)
+
 def Hobbies(request):
-    hobby = Hobby.objects.all()
-    return HttpResponse(hobby)
+    context = {
+        'hobbies': Hobby.objects.all(),
+    }
+    return render(request, 'portfolioDB/hobbies.html', context)
+
+
+def HobbyDetail(request, hobby_id):
+    context ={
+        'hobby': Hobby.objects.get(pk=hobby_id),
+    }
+    return render(request, 'portfolioDB/hobby_detail.html', context)
 def Contact(request):
-    return HttpResponse("My contact info")
+    return render(request, 'portfolioDB/contact.html')

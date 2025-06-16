@@ -1,0 +1,95 @@
+{% extends 'portfolioDB/base.html' %}
+
+{% block body %}
+<div class="container mt-4">
+    <!-- Profile Header -->
+    <div class="text-center mb-4">
+        <img src="{{ portfolio.image }}" alt="{{ portfolio.name }}" class="img-fluid rounded-circle" style="width: 150px; height: 150px; object-fit: cover;">
+  <!DOCTYPE html>
+<html lang="en">
+
+    <header>
+        <h1>Anastasia Armstrong</h1>
+        <p>Centerville, UT 84014</p>
+        <p><strong>Phone:</strong> (801)-556-2316 | <strong>Email:</strong> <a href="mailto:tazele@gmail.com">tazele@gmail.com</a></p>
+    </header>
+
+    <section>
+    <h2>Skills and Experience</h2>
+    <div style="display: flex; justify-content: space-between;">
+        <ul style="width: 48%; list-style-type: none; padding: 0;">
+            <li>UI/UX experience</li>
+            <li>Data normalization and standardization</li>
+            <li>Application Flow creation</li>
+            <li>Oracle experience</li>
+        </ul>
+        <ul style="width: 48%; list-style-type: none; padding: 0;">
+            <li>Windows User Configurations</li>
+            <li>Microsoft Office Products experience</li>
+            <li>Debugging projects and programs</li>
+            <li>Designing and building SQL databases</li>
+        </ul>
+    </div>
+</section>
+
+
+    <section>
+        <h2>Professional Experience</h2>
+        <table>
+            <tr>
+                <th>Company</th>
+                <th>Position</th>
+                <th>Dates</th>
+                <th>Location</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>ICU Medical</td>
+                <td>Quality Assurance Inspection</td>
+                <td>7/23 - 9/23</td>
+                <td>Salt Lake City, UT</td>
+                <td>Filled and filed inspection paperwork manually and digitally in Oracle. Reviewed and led personnel in identifying nonconforming materials. Managed Non-Conformance Material Report (NCMR) releases.</td>
+            </tr>
+            <tr>
+                <td>Laughing Peaks</td>
+                <td>Jr UX/UI</td>
+                <td>5/25 - Present</td>
+                <td>Remote</td>
+                <td>Develop UI/UX for POC web application, including public testing. Created site flow diagrams and assisted in frontend development using HTML, CSS, and Ruby on Rails.</td>
+            </tr>
+        </table>
+    </section>
+
+    <section>
+        <h2>Education</h2>
+        <p><strong>High School Diploma:</strong> Viewmont High School, Bountiful, UT (June 2019)</p>
+        <p><strong>General Associates:</strong> Weber State University (2020)</p>
+        <p><strong>Computer Science Associates:</strong> Weber State University (2023)</p>
+        <p><strong>Current Studies:</strong> Computer Science Bachelor's, Weber State University</p>
+    </section>
+
+    <section>
+    <h2>Languages</h2>
+    <div style="display: flex; justify-content: space-between;">
+        <ul style="width: 48%; list-style-type: none; padding: 0;">
+            <li>SQL</li>
+            <li>HTML</li>
+            <li>C++</li>
+            <li>Python</li>
+        </ul>
+        <ul style="width: 48%; list-style-type: none; padding: 0;">
+            <li>CSS</li>
+            <li>C#</li>
+            <li>Java</li>
+            <li>.NET</li>
+        </ul>
+    </div>
+    </section>
+
+    <section>
+        <h2>References</h2>
+        <p><strong>DeeJay Laughbon</strong></p>
+        <p>Owner and Team Lead for Laughing Peaks</p>
+        <p>Phone: (385)-220-4660 | Email: <a href="mailto:laughingpeaks@gmail.com">laughingpeaks@gmail.com</a></p>
+    </section>
+{% endblock %}

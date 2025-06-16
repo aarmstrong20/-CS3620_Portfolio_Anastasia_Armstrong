@@ -1,0 +1,23 @@
+{% extends 'portfolioDB/base.html' %}
+
+{% block body %}
+<div class="container mt-4">
+    {% for hobby in hobbies %}
+    <div class="row align-items-center mb-2">
+        <div class="col-md-3">
+            <img src="{{ hobby.image }}" alt="{{ hobby.name }}" class="img-fluid rounded" style="max-width: 100px;">
+        </div>
+        <div class="col-md-6">
+            <h5 class="mb-1">{{ hobby.name }}</h5>
+            <p class="small text-muted">{{ hobby.hobby_desc }}</p>
+        </div>
+        <div class="col-md-3 text-end">
+            <a href="{% url 'portfolioDB:hobby_detail' hobby.id %}" class="btn btn-primary btn-sm">
+                View Details
+            </a>
+        </div>
+    </div>
+    <hr> <!-- Adds a divider between items -->
+    {% endfor %}
+</div>
+{% endblock %}

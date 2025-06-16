@@ -9,11 +9,11 @@
 </head>
 <body>
 <nav class="navbar-dark bg-dark">
-    <a href="#" class="navbar-brand">Portfolio App</a>
+    <a href="/Home" class="navbar-brand">Portfolio App</a>
     <div class = "navbar">
-        <a href="#" class="nav-item">Hobbies</a>
-        <a href="#" class="nav-item">Portfolio</a>
-        <a href="#" class="nav-item">Contact</a>
+        <a href="{% url 'portfolioDB:Hobbies' %}" class="nav-item">Hobbies</a>
+<a href="{% url 'portfolioDB:Portfolio' %}" class="nav-item">Portfolio</a>
+<a href="{% url 'portfolioDB:Contact' %}" class="nav-item">Contact</a>
 
     </div>
 </nav>
