@@ -1,0 +1,19 @@
+{% extends 'portfolioDB/base.html' %}
+
+{% block body %}
+<div class="container mt-5">
+  <div class="text-center">
+    <h1>{{ user.username }}</h1>
+
+    {% if user.profile.image %}
+        <img src="{{ user.profile.image.url }}" alt="{{ user.username }}" class="rounded-circle" height="150">
+    {% else %}
+        <img src="/pictures/profile_pics/profilepic.jpg" alt="Default profile picture" class="rounded-circle" height="150">
+    {% endif %}
+
+    <p class="mt-3">{{ user.email }}</p>
+
+
+  </div>
+</div>
+{% endblock %}

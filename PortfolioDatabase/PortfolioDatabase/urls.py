@@ -16,8 +16,20 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-
+from accounts import views as accounts_view
+from django.contrib.auth import views as authentication_views
+from django.conf import settings
+from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('Home/', include('portfolioDB.urls'))
+    path('Home/', include('portfolioDB.urls')),
+    path('register/', accounts_view.register, name='register'),
+    path('login/', authentication_views.LoginView.as_view(template_name='accounts/login.html'), name='login'),
+    path('logout/',authentication_views.LogoutView.as_view(template_name='accounts/logout.html'), name='logout'),
+    path('profile/', accounts_view.profile, name='profile'),
 ]
+
+
+urlpatterns += [
+    # ... the rest of your URLconf goes here ...
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
